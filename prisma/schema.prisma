@@ -11,12 +11,9 @@ model User {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
-
-  email    String @unique
-  password String
-  phone    String @unique @default("")
-
-  birthDay  String
   firstName String
-  lastName  String
+  email     String   @unique
+  password  String
+  phone     String   @unique @default("")
+  birthDay  String
 }
